@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#welcome,
+#timer,
+#waiting,
+#question {
+    display: none;
+    text-align: center;
+}
+
+#back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.option-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.option-button img {
+    width: 200px;
+    height: auto;
+}

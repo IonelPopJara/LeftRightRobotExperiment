@@ -1,0 +1,6 @@
+mqtt pub -t 'kuggen/experiment/robots/timer' -h broker.hivemq.com -m "start_timer"
+mqtt pub -t 'kuggen/experiment/robots/timer' -h broker.hivemq.com -m "stop_timer"
+mqtt pub -t 'kuggen/experiment/robots/question' -h broker.hivemq.com -m "Does the robot want me to go left or right?"
+
+;
+const topicQuestion = ;

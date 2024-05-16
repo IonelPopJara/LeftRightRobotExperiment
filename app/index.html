@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.6.0/mqtt.min.js" integrity="sha512-ciFC7TkMIMLpxCLm5YaxOFw17097z/JcrHMvOOBEXevQsgWZK4+J9QiWoyXoVR6nJJtKjoHK71XyrtdO0LUmbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script> -->
+</head>
+<body>
+    <button id="back-button" onclick="showWelcomePage()">Back to Welcome Page</button>
+
+    <div id="welcome">
+        <h1>Welcome to the Experiment</h1>
+        <p>Please enter your participant ID:</p>
+        <input type="text" id="participant-id" placeholder="Participant ID">
+        <button onclick="startExperiment()">Start</button>
+    </div>
+
+    <div id="waiting">
+        <h1>Waiting for the next question...</h1>
+    </div>
+
+    <div id="timer">
+        <p id="timer-text">Timer: 0s</p>
+    </div>
+
+    <div id="question">
+        <h1>Answer the question</h1>
+        <p id="question-text">This is a question</p>
+        <div id="options">
+            <button class="option-button" id="option1" onclick="submitAnswer('Option 1')">
+                <img src="./resources/arrow-left.png" alt="Option 1">
+            </button>
+            <button class="option-button" id="option2" onclick="submitAnswer('Option 2')">
+                <img src="./resources/arrow-right.png" alt="Option 2">
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
