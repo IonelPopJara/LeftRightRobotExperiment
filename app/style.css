@@ -1,5 +1,12 @@
+:root {
+    --primary-color: #FF9F66;
+    --secondary-color: #FF5F00;
+    --background-color: #FFFAE6;
+    --text-color: #002379;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Montserrat;
     margin: 0;
     padding: 0;
     display: flex;
@@ -7,15 +14,32 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: lighter;
 }
 
 #welcome,
 #timer,
-#waiting,
 #question {
     display: none;
     text-align: center;
+    color: var(--text-color);
+}
+#waiting,
+#waiting-text {
+    padding-left: 2.5rem;
+    align-self: self-start;
+    text-align: left;
 }
 
 #back-button {
@@ -23,7 +47,7 @@ body {
     top: 10px;
     right: 10px;
     cursor: pointer;
-    background-color: #f44336;
+    background-color: var(--secondary-color);
     color: white;
     padding: 10px;
     border: none;

@@ -8,12 +8,14 @@ let trialNumber = 0;
 
 function showWelcomePage() {
     // console.log('showWelcomePage');
+    stopTimer();
 
     document.getElementById('welcome').style.display = 'block';
     document.getElementById('waiting').style.display = 'none';
+    document.getElementById('back-button').style.display = 'none';
 
     // For debugging
-    document.getElementById('timer').style.display = 'none';
+    // document.getElementById('timer').style.display = 'none';
 
     document.getElementById('question').style.display = 'none';
     localStorage.removeItem('participantId');
@@ -31,9 +33,10 @@ function startExperiment() {
         localStorage.setItem('participantId', participantId);
         document.getElementById('welcome').style.display = 'none';
         document.getElementById('waiting').style.display = 'block';
+        document.getElementById('back-button').style.display = 'block';
 
         // For debugging
-        document.getElementById('timer').style.display = 'block';
+        // document.getElementById('timer').style.display = 'block';
 
         connectToMQTT();
     } else {
@@ -63,9 +66,24 @@ function startTimer() {
     getTrialNumber();
 
     startTime = Date.now();
+    const originalText = "Waiting for the next question";
+
     timeInterval = setInterval(() => {
-        const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-        document.getElementById('timer-text').innerText = `Timer: ${elapsedTime}s`;
+
+        let elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+        if (elapsedTime % 4 === 0) {
+            document.getElementById('waiting-text').innerText = originalText;
+        }
+        else {
+            let stream = document.getElementById('waiting-text').innerText;
+            stream += '.';
+            document.getElementById('waiting-text').innerText = stream;
+        }
+
+        // For debugging
+        // const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+        // document.getElementById('timer-text').innerText = `Timer: ${elapsedTime}s`;
+        // console.log(`Timer: ${elapsedTime}s`);
     }, 1000);
 }
 
@@ -138,7 +156,9 @@ function submitAnswer(selectedOption) {
             console.log('Success:', data);
             document.getElementById('question').style.display = 'none';
             document.getElementById('waiting').style.display = 'block';
-            document.getElementById('timer-text').innerText = 'Timer: 0s';
+
+            // For debugging
+            // document.getElementById('timer-text').innerText = 'Timer: 0s';
         })
         .catch((error) => {
             console.error('Error:', error);
