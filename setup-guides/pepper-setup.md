@@ -7,3 +7,41 @@ If that is not the case, you can just turn pepper on. If after turning Pepper on
 To do this, your first need to take out the pins located in Pepper's back comparment. Then you can insert the pins in the pin holes located on top of Pepper's head to open the ethernet hatch.
 
 Once you connect the ethernet cable, you can press Pepper's center button again to listen for the current IP address. Put that IP address into a browser and log in with your credentials to set-up Pepper.
+
+## Setup Python SDK
+
+This SDK requires the use of Python 2.7. On linux, you can install python 2.7 by running:
+
+```bash
+sudo apt-get install python2
+```
+
+Alternatively, you can make use of virtual environments to control the version of Python you are using.
+
+You can download the Python SDK from [here](https://www.aldebaran.com/fr/support/nao-6/downloads-softwares).
+
+### Linux
+Extract the folder and move it to the desired location. Then you can add the path to the Python SDK to your `PYTHONPATH` environment variable by doing the following:
+
+```bash
+export PYTHONPATH=${PYTHONPATH}:/path-to-installation/pynaoqi/lib/python2.7/site-packages
+```
+
+Alternatively, if you don't want to export the path every time you open a new terminal, you can add the path to your `.bashrc` file.
+
+```bash
+echo 'export PYTHONPATH=${PYTHONPATH}:/path-to-installation/pynaoqi/lib/python2.7/site-packages' >> ~/.bashrc
+```
+
+Now you should be able to run python2 by doing:
+```bash
+python2
+```
+
+To check if the SDK is installed successfully, you can run the following command inside python2:
+
+```bash
+import naoqi
+```
+
+If no errors are thrown, the SDK is installed correctly.

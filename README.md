@@ -98,7 +98,7 @@ The robots used for this experiment are [TurleBot 4](https://turtlebot.github.io
 
 It is important to notice that virtually any robot should be able to interact with the application as long as MQTT can be implemented.
 
-Currently, in the [scripts folder](/scripts/) you will find two shell scripts: [turtlebot.sh](/scripts/turtlebot.sh) and [pepper.sh](/scripts/pepper.sh). These scripts are in charge of sending the respective commands to the robots to move forward, and communicating with the main application via MQTT.
+Currently, in the [scripts folder](/scripts/) you will find two shell scripts: [turtlebot.sh](/scripts/turtlebot.sh) and [pepper.sh](/scripts/pepper.sh). These scripts are in charge of sending the respective commands to the robots to move forward, and communicating with the main application via MQTT. There is a third script called [pepper-move.py](/scripts/pepper-move.py). This script is called inside `pepper.sh` and it uses the SDK to move Pepper.
 
 To run the scripts you can use the following commands:
 
