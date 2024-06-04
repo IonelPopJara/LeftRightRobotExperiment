@@ -2,7 +2,7 @@
 
 # Function to run Pepper's movement script
 move_pepper() {
-    python2 pepper-move.py
+    python2 pepper-move.py 3
 }
 
 # Function to publish an MQTT message

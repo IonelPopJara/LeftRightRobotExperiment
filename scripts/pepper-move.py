@@ -1,5 +1,6 @@
 from naoqi import ALProxy
 import time
+import sys
 
 ip = "192.168.0.101"
 port = 9559
@@ -22,7 +23,11 @@ posture_proxy.goToPosture("StandInit", 0.5)
 time.sleep(1)
 
 # Move forward 1 meter
-x = 3.0 # meters
+
+if sys.argv[1]:
+    x = float(sys.argv[1])
+else:
+    x = 1.0 # meters
 y = 0.0 # meters
 theta = 0.0 # radians
 
