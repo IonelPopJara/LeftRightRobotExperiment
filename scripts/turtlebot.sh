@@ -13,7 +13,7 @@ publish_mqtt_message() {
 }
 
 # Send MQTT message to start the timer
-publis_mqtt_message "kuggen/experiment/robots/timer" "Start Timer"
+publish_mqtt_message "kuggen/experiment/robots/timer" "Start Timer"
 
 # Send the ROS 2 action goal
 send_ros_action

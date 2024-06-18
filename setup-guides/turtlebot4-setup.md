@@ -22,6 +22,12 @@ By default, simple discovery is selected as the network configuration in a fresh
 
 ## Important Points and Common Issues
 
+### The passed action type is invalid ros2
+
+```bash
+sudo apt install -y ros-humble-irobot-create-msgs
+```
+
 ### Set the TurtleBot to Access Point before transporting it
 
 If you move the TurtleBot to a new location without setting it to [Access Point Mode](https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html#access-point-mode), the TurtleBot will not be able to connect to a new wifi.

@@ -2,7 +2,8 @@ from naoqi import ALProxy
 import time
 import sys
 
-ip = "192.168.0.101"
+# NOTE: Check Pepper's IP address before running the script
+ip = "192.168.0.102"
 port = 9559
 
 # Create proxies for the necessary modules
@@ -24,7 +25,7 @@ time.sleep(1)
 
 # Move forward 1 meter
 
-if sys.argv[1]:
+if len(sys.argv) > 1:
     x = float(sys.argv[1])
 else:
     x = 1.0 # meters
