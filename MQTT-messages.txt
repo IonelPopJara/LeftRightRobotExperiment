@@ -2,5 +2,7 @@ mqtt pub -t 'kuggen/experiment/robots/timer' -h broker.hivemq.com -m "start_time
 mqtt pub -t 'kuggen/experiment/robots/timer' -h broker.hivemq.com -m "stop_timer"
 mqtt pub -t 'kuggen/experiment/robots/question' -h broker.hivemq.com -m "Does the robot want me to go left or right?"
 
+ mosquitto_pub -h 'broker.hivemq.com' -t 'hello' -m 'First message'
+
 ;
 const topicQuestion = ;

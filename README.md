@@ -59,7 +59,7 @@ python server.py
 
 ## Overview
 
-The frontend of the applforication is written in plain `HTML`, `CSS`, and `JavaScript`. The app communicates with a server written in `Python` using `Flask`. This server is responsible for writting the experiment data to a `csv` file to be analyzed later. The system also makes use of MQTT for the communication between the robots and the frontend.
+The frontend of the application is written in plain `HTML`, `CSS`, and `JavaScript`. The app communicates with a server written in `Python` using `Flask`. This server is responsible for writing the experiment data to a `csv` file to be analyzed later. The system also makes use of MQTT for the communication between the robots and the frontend.
 
 ### CSV Format
 
@@ -75,7 +75,7 @@ kuggen/experiment/robots/timer
 ```
 
 ```bash
-# A message with  this topic will display the quesiton sent in the payload
+# A message with  this topic will display the question sent in the payload
 kuggen/experiment/robots/question
 ```
 
