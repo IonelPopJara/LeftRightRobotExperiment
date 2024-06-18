@@ -12,7 +12,15 @@ The recommended version of ROS 2 is [ROS 2 Humble](https://docs.ros.org/en/humbl
 
 ### Follow the Basic Setup
 
-The [basic setup](https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html) includes some short and easy steps that explain how to connect and set up the TurtleBot for the first time.
+Once ROS 2 is installed, install the turtlebot4_desktop dependency by running:
+
+```bash
+sudo apt update && sudo apt install ros-humble-turtlebot4-desktop
+```
+
+Then, follow the [Basic Setup](https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html).
+
+The basic setup includes some short and easy steps that explain how to connect and set up the TurtleBot for the first time.
 
 ### Set up Simple Discovery
 
@@ -20,13 +28,13 @@ The TurtleBot can function with two different network configurations: Simple Dis
 
 By default, simple discovery is selected as the network configuration in a fresh install. However, in order to properly detect the topics published by the TurtleBot, some configurations need to be done to the user's computer. [This guide](https://turtlebot.github.io/turtlebot4-user-manual/setup/simple_discovery.html) explains the necessary setup.
 
-## Important Points and Common Issues
-
-### The passed action type is invalid ros2
+To make use of turtlebot's topics you will need to install the following dependency
 
 ```bash
 sudo apt install -y ros-humble-irobot-create-msgs
 ```
+
+## Important Points and Common Issues
 
 ### Set the TurtleBot to Access Point before transporting it
 
