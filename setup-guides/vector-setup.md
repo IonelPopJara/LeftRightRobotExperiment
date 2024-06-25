@@ -6,7 +6,7 @@
 
 ## Things needed
 1. A 2.4GHz internet connection.
-   * Due to eduroam's security settings, it is not possible to connect to Vector using eduroam.
+   * Due to Eduroam's security settings, it is not possible to connect to Vector using Eduroam.
 2. A Raspberry Pi connected to the 2.4GHz network.
    * If you want to use a graphical interface, you will need a mini hdmi, a keyboard, and a mouse. Otherwise, it is recommended to use SSH.
    * When installing Raspberry Pi OS, the name of the device should be set up to `escapepod`, and the SSH should be enabled and connected to the internet.
